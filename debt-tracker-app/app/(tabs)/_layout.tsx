@@ -7,7 +7,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { HistoryIcon } from 'lucide-react-native';
+import { ChartPieIcon, HistoryIcon, User2Icon, UserIcon, UserRoundIcon } from 'lucide-react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -41,6 +41,21 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <HistoryIcon size={28} color={color} />,
         }}
       />
+       <Tabs.Screen
+        name="charts"
+        options={{
+          title: 'Datos',
+          tabBarIcon: ({ color }) => <ChartPieIcon size={28} color={color} />,
+        }}
+      />
+       <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Perfil',
+          tabBarIcon: ({ color }) => <UserRoundIcon size={28} color={color} />,
+        }}
+      />
+      
     </Tabs>
   );
 }
